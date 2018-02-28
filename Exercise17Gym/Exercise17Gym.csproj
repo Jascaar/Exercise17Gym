@@ -190,12 +190,27 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GymClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802280835258_init.cs" />
+    <Compile Include="Migrations\201802280835258_init.Designer.cs">
+      <DependentUpon>201802280835258_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802280847252_init2.cs" />
+    <Compile Include="Migrations\201802280847252_init2.Designer.cs">
+      <DependentUpon>201802280847252_init2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802280902029_0.2.cs" />
+    <Compile Include="Migrations\201802280902029_0.2.Designer.cs">
+      <DependentUpon>201802280902029_0.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\GymClass.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -258,6 +273,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\GymClasses\Create.cshtml" />
+    <Content Include="Views\GymClasses\Delete.cshtml" />
+    <Content Include="Views\GymClasses\Details.cshtml" />
+    <Content Include="Views\GymClasses\Edit.cshtml" />
+    <Content Include="Views\GymClasses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -274,6 +294,17 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802280835258_init.resx">
+      <DependentUpon>201802280835258_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802280847252_init2.resx">
+      <DependentUpon>201802280847252_init2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802280902029_0.2.resx">
+      <DependentUpon>201802280902029_0.2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
