@@ -9,7 +9,7 @@
 
 @if (User.Identity.IsAuthenticated == true) {
 
-    if (User.IsInRole("admin")) { 
+    if (User.IsInRole("Admin")) { 
 <p>
         @Html.ActionLink("Create New", "Create")
 </p>
@@ -24,6 +24,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndTime)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
@@ -41,6 +44,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndTime)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Description)

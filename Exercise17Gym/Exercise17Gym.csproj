@@ -219,6 +219,62 @@
     <Compile Include="Migrations\201802281418008_bugFixing2.Designer.cs">
       <DependentUpon>201802281418008_bugFixing2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802281424523_bugFixing3.cs" />
+    <Compile Include="Migrations\201802281424523_bugFixing3.Designer.cs">
+      <DependentUpon>201802281424523_bugFixing3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281453082_bugFixing4.cs" />
+    <Compile Include="Migrations\201802281453082_bugFixing4.Designer.cs">
+      <DependentUpon>201802281453082_bugFixing4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281458082_bugFixing5.cs" />
+    <Compile Include="Migrations\201802281458082_bugFixing5.Designer.cs">
+      <DependentUpon>201802281458082_bugFixing5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281504098_bugFixing6.cs" />
+    <Compile Include="Migrations\201802281504098_bugFixing6.Designer.cs">
+      <DependentUpon>201802281504098_bugFixing6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281508349_bugFixing7.cs" />
+    <Compile Include="Migrations\201802281508349_bugFixing7.Designer.cs">
+      <DependentUpon>201802281508349_bugFixing7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281512233_bugFixing8.cs" />
+    <Compile Include="Migrations\201802281512233_bugFixing8.Designer.cs">
+      <DependentUpon>201802281512233_bugFixing8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281513321_bugFixing9.cs" />
+    <Compile Include="Migrations\201802281513321_bugFixing9.Designer.cs">
+      <DependentUpon>201802281513321_bugFixing9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281518409_bugFixing10.cs" />
+    <Compile Include="Migrations\201802281518409_bugFixing10.Designer.cs">
+      <DependentUpon>201802281518409_bugFixing10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281520202_bugFixing11.cs" />
+    <Compile Include="Migrations\201802281520202_bugFixing11.Designer.cs">
+      <DependentUpon>201802281520202_bugFixing11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281521474_bugFixing12.cs" />
+    <Compile Include="Migrations\201802281521474_bugFixing12.Designer.cs">
+      <DependentUpon>201802281521474_bugFixing12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281526303_bugFixing13.cs" />
+    <Compile Include="Migrations\201802281526303_bugFixing13.Designer.cs">
+      <DependentUpon>201802281526303_bugFixing13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281530286_bugFixing14.cs" />
+    <Compile Include="Migrations\201802281530286_bugFixing14.Designer.cs">
+      <DependentUpon>201802281530286_bugFixing14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281548406_bugFixing15.cs" />
+    <Compile Include="Migrations\201802281548406_bugFixing15.Designer.cs">
+      <DependentUpon>201802281548406_bugFixing15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281551320_bugFixing16.cs" />
+    <Compile Include="Migrations\201802281551320_bugFixing16.Designer.cs">
+      <DependentUpon>201802281551320_bugFixing16.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\GymClass.cs" />
@@ -325,6 +381,48 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802281418008_bugFixing2.resx">
       <DependentUpon>201802281418008_bugFixing2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281424523_bugFixing3.resx">
+      <DependentUpon>201802281424523_bugFixing3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281453082_bugFixing4.resx">
+      <DependentUpon>201802281453082_bugFixing4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281458082_bugFixing5.resx">
+      <DependentUpon>201802281458082_bugFixing5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281504098_bugFixing6.resx">
+      <DependentUpon>201802281504098_bugFixing6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281508349_bugFixing7.resx">
+      <DependentUpon>201802281508349_bugFixing7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281512233_bugFixing8.resx">
+      <DependentUpon>201802281512233_bugFixing8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281513321_bugFixing9.resx">
+      <DependentUpon>201802281513321_bugFixing9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281518409_bugFixing10.resx">
+      <DependentUpon>201802281518409_bugFixing10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281520202_bugFixing11.resx">
+      <DependentUpon>201802281520202_bugFixing11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281521474_bugFixing12.resx">
+      <DependentUpon>201802281521474_bugFixing12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281526303_bugFixing13.resx">
+      <DependentUpon>201802281526303_bugFixing13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281530286_bugFixing14.resx">
+      <DependentUpon>201802281530286_bugFixing14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281548406_bugFixing15.resx">
+      <DependentUpon>201802281548406_bugFixing15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281551320_bugFixing16.resx">
+      <DependentUpon>201802281551320_bugFixing16.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
