@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201802281211377_bugFixing1.Designer.cs">
       <DependentUpon>201802281211377_bugFixing1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802281418008_bugFixing2.cs" />
+    <Compile Include="Migrations\201802281418008_bugFixing2.Designer.cs">
+      <DependentUpon>201802281418008_bugFixing2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\GymClass.cs" />
@@ -318,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802281211377_bugFixing1.resx">
       <DependentUpon>201802281211377_bugFixing1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281418008_bugFixing2.resx">
+      <DependentUpon>201802281418008_bugFixing2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

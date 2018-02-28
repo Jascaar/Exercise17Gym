@@ -81,10 +81,16 @@ namespace Exercise17Gym.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
+        [Display(Name = "First name")]
+        [StringLength(100, ErrorMessage = "The {0} must concist of at least 1 character", MinimumLength = 1)]
         public string FirstName { get; set; }
+        [Display(Name = "Last name")]
+        [StringLength(100, ErrorMessage = "The {0} must concist of at least 1 character", MinimumLength = 1)]
         public string LastName { get; set; }
+        [Display(Name = "Full name")]
         public string FullName { get { return FirstName + " " + LastName; } }
-        public DateTime TimeOfRegistration { get; set; } = DateTime.Now;
+        [Display(Name = "Registration date/time")]
+        public DateTime TimeOfRegistration { get;} = DateTime.Now;
 
 
 
