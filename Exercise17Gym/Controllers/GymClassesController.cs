@@ -15,6 +15,7 @@ namespace Exercise17Gym.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
 
+        [Authorize]
         public ActionResult BookingToggle (int id)
         {
             GymClass CurrentClass = db.GymClasses.Where(g => g.Id == id).FirstOrDefault();
@@ -32,9 +33,10 @@ namespace Exercise17Gym.Controllers
             }
             return RedirectToAction("Index");
         }
-        
-        
+
+
         // GET: GymClasses
+        
         public ActionResult Index()
         {
             return View(db.GymClasses.ToList());
@@ -56,6 +58,7 @@ namespace Exercise17Gym.Controllers
         }
 
         // GET: GymClasses/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -66,6 +69,7 @@ namespace Exercise17Gym.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "Id,Name,StartTime,Duration,Description")] GymClass gymClass)
         {
             if (ModelState.IsValid)
@@ -79,6 +83,7 @@ namespace Exercise17Gym.Controllers
         }
 
         // GET: GymClasses/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -98,6 +103,7 @@ namespace Exercise17Gym.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "Id,Name,StartTime,Duration,Description")] GymClass gymClass)
         {
             if (ModelState.IsValid)
@@ -110,6 +116,7 @@ namespace Exercise17Gym.Controllers
         }
 
         // GET: GymClasses/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -127,6 +134,7 @@ namespace Exercise17Gym.Controllers
         // POST: GymClasses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             GymClass gymClass = db.GymClasses.Find(id);
@@ -135,6 +143,7 @@ namespace Exercise17Gym.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         protected override void Dispose(bool disposing)
         {
             if (disposing)

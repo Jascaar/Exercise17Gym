@@ -42,13 +42,14 @@
             @Html.DisplayFor(model => model.Description)
         </dd>
 
+        <p><br />  </p>
         <dt>
             @Html.DisplayNameFor(model => model.AttendingMembers)
         </dt>
-
+        
         @foreach (var AttendingMember in Model.AttendingMembers){
         <dd>
-            @AttendingMember.Email)
+            @AttendingMember.Email
         </dd>
         }
 
