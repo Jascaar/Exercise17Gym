@@ -10,16 +10,10 @@ using Exercise17Gym.Models;
 
 namespace Exercise17Gym.Controllers
 {
+    [Authorize]
     public class GymClassesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
-
-                        //Blockera Edit-, Create- och Delete-actions från alla besökare som ej tillhör rollen “admin”
-
-
-
-
 
         [Authorize]
         public ActionResult BookingToggle (int id)
@@ -42,15 +36,21 @@ namespace Exercise17Gym.Controllers
 
 
         // GET: GymClasses
-        
+        [AllowAnonymous]
         public ActionResult Index()
         {
+            ViewBag.Title = "Gymclass index";
+            var role = new Role();
+            ViewBag.Roles = role;
             return View(db.GymClasses.ToList());
         }
 
         // GET: GymClasses/Details/5
         public ActionResult Details(int? id)
         {
+            ViewBag.Title = "Gymclass, details";
+            var role = new Role();
+            ViewBag.Roles = role;
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -64,9 +64,10 @@ namespace Exercise17Gym.Controllers
         }
 
         // GET: GymClasses/Create
-        [Authorize]
+        [Authorize(Roles =Role.Admin)]
         public ActionResult Create()
         {
+            ViewBag.Title = "Create new gymclass";
             return View();
         }
 
@@ -74,8 +75,8 @@ namespace Exercise17Gym.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize(Roles = Role.Admin)]
         [ValidateAntiForgeryToken]
-        [Authorize]
         public ActionResult Create([Bind(Include = "Id,Name,StartTime,Duration,Description")] GymClass gymClass)
         {
             if (ModelState.IsValid)
@@ -89,9 +90,10 @@ namespace Exercise17Gym.Controllers
         }
 
         // GET: GymClasses/Edit/5
-        [Authorize]
+        [Authorize(Roles = Role.Admin)]
         public ActionResult Edit(int? id)
         {
+            ViewBag.Title = "Edit gymclass";
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -109,7 +111,7 @@ namespace Exercise17Gym.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        [Authorize(Roles = Role.Admin)]
         public ActionResult Edit([Bind(Include = "Id,Name,StartTime,Duration,Description")] GymClass gymClass)
         {
             if (ModelState.IsValid)
@@ -122,9 +124,10 @@ namespace Exercise17Gym.Controllers
         }
 
         // GET: GymClasses/Delete/5
-        [Authorize]
+        [Authorize(Roles = Role.Admin)]
         public ActionResult Delete(int? id)
         {
+            ViewBag.Title = "Delete gymclass";
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -140,7 +143,7 @@ namespace Exercise17Gym.Controllers
         // POST: GymClasses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        [Authorize(Roles = Role.Admin)]
         public ActionResult DeleteConfirmed(int id)
         {
             GymClass gymClass = db.GymClasses.Find(id);
@@ -149,7 +152,7 @@ namespace Exercise17Gym.Controllers
             return RedirectToAction("Index");
         }
 
-        [Authorize]
+        [Authorize(Roles = Role.Admin)]
         protected override void Dispose(bool disposing)
         {
             if (disposing)

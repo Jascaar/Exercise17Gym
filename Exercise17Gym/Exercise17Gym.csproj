@@ -207,11 +207,20 @@
     <Compile Include="Migrations\201802280902029_0.2.Designer.cs">
       <DependentUpon>201802280902029_0.2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802281003267_0.491.cs" />
+    <Compile Include="Migrations\201802281003267_0.491.Designer.cs">
+      <DependentUpon>201802281003267_0.491.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802281211377_bugFixing1.cs" />
+    <Compile Include="Migrations\201802281211377_bugFixing1.Designer.cs">
+      <DependentUpon>201802281211377_bugFixing1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\GymClass.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -273,6 +282,9 @@
     <Content Include="Views\GymClasses\Delete.cshtml" />
     <Content Include="Views\GymClasses\Details.cshtml" />
     <Content Include="Views\GymClasses\Edit.cshtml" />
+    <Content Include="Views\GymClasses\Upcoming.cshtml" />
+    <Content Include="Views\GymClasses\MyUpcoming.cshtml" />
+    <Content Include="Views\GymClasses\MyPrevious.cshtml" />
     <Content Include="Views\GymClasses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -300,6 +312,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802280902029_0.2.resx">
       <DependentUpon>201802280902029_0.2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281003267_0.491.resx">
+      <DependentUpon>201802281003267_0.491.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802281211377_bugFixing1.resx">
+      <DependentUpon>201802281211377_bugFixing1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
