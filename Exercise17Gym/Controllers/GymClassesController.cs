@@ -15,6 +15,12 @@ namespace Exercise17Gym.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
 
+                        //Blockera Edit-, Create- och Delete-actions från alla besökare som ej tillhör rollen “admin”
+
+
+
+
+
         [Authorize]
         public ActionResult BookingToggle (int id)
         {
