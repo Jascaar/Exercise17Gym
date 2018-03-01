@@ -40,5 +40,7 @@ namespace Exercise17Gym.Models
         {
             return new ApplicationDbContext();
         }
+
+        
     }
 }

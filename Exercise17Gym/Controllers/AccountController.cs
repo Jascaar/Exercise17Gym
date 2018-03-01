@@ -172,6 +172,10 @@ namespace Exercise17Gym.Controllers
             return View(model);
         }
 
+
+  
+
+
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
