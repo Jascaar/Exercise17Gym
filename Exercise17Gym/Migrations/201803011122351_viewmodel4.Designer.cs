@@ -7,13 +7,13 @@ namespace Exercise17Gym.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class bugFixing5 : IMigrationMetadata
+    public sealed partial class viewmodel4 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(bugFixing5));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(viewmodel4));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802281458082_bugFixing5"; }
+            get { return "201803011122351_viewmodel4"; }
         }
         
         string IMigrationMetadata.Source

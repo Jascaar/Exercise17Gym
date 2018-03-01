@@ -1,6 +1,12 @@
 ﻿body {
+    font-family: "Raleway";
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #000044;
+    color: #FFFFFF;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-image: url("http://www.menshealth.com/sites/menshealth.com/files/articles/2017/01/how-much-joining-gym-helps-health-2.jpg.jpeg");
+    background-size: 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +27,28 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.navbar {
+    background-color: #000000;
+}
+
+.nav{
+    font-family: "Raleway";
+    font-size: 10pt;
+    letter-spacing: 1pt;
+}
+
+.border-right {
+    border-right: 1px solid #FFFFFF;
+}
+
+.borders {
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    margin: -1px;
+}
+
+.border-left {
+    border-left: 1px solid #FFFFFF;
 }

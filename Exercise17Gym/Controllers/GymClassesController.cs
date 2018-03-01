@@ -34,7 +34,6 @@ namespace Exercise17Gym.Controllers
             return RedirectToAction("Index");
         }
 
-
         // GET: GymClasses
         [AllowAnonymous]
         public ActionResult Index()
@@ -42,7 +41,12 @@ namespace Exercise17Gym.Controllers
             ViewBag.Title = "Gymclass index";
             var role = new Role();
             ViewBag.Roles = role;
+            ApplicationUser CurrentUser = db.Users.Where(g => g.UserName == User.Identity.Name).FirstOrDefault();
+            if (CurrentUser== null) ViewBag.WelcomeMessage = "Please sign in to see more information from the Gym";
+            else ViewBag.WelcomeMessage = "Welcome to the Gym " + CurrentUser.FullName;
+            
             return View(db.GymClasses.ToList());
+            
         }
 
         // GET: GymClasses/Details/5

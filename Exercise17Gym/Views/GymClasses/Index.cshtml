@@ -4,73 +4,104 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Welcome to your Gym</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-lg-12">
+            <h2 class="label-primary">@ViewBag.WelcomeMessage</h2>
+            <div class="row">
+                <div class="col-sm-12 col-lg-3">
+                </div>
+                <div class="col-sm-12 col-lg-9">
 
 
-@if (User.Identity.IsAuthenticated == true) {
+                    @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("Admin"))
+                {
+                    <p>
+                        @Html.ActionLink("Register a new class", "Create")
+                    </p>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        </div>
 
-    if (User.IsInRole("Admin")) { 
-<p>
-        @Html.ActionLink("Create New", "Create")
-</p>
-}
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StartTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Duration)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th></th>
-    </tr>
+    <div class="row">
+        <div class="col-sm-12 col-lg-3 border-right">
+            <h1>Welcome to the friendliest gym in the world!</h1>
+            <p>Don’t just take our word for it, even our members have voted us ‘Most Loved Business in all universes’ and we are very proud that they think so!</p>
+            <ul>
+                <li>All ages, shapes and sizes are welcomed and feel comfortable in the open friendly environment of the Gym.</li>
+                <li>You can park for free and from the moment you enter the air-conditioned Club you are greeted by name and given assistance if needed.</li>
+                <li>Our fully qualified fitness and nutritional instructors are committed to helping you reach your health and fitness goals.</li>
+                <li>Whether you are enjoying one of our 32 weekly classes, using the variety of cardio machines or weight training, you can be sure our personal trainers will be on hand to give advice.</li>
+                <li>Your wellbeing is our business and we take it very seriously!</li>
+            </ul>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StartTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Duration)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EndTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
+        </div>
 
-                @if (User.IsInRole("Admin")) {  @Html.ActionLink("Edit", "Edit", new { id = item.Id }) <span>|</span>}
-                                            @Html.ActionLink("Details", "Details", new { id = item.Id }) @if (User.IsInRole("Admin"))
-                                            {   <span>|</span>@Html.ActionLink("Delete", "Delete", new { id = item.Id }) <span>|</span>}
-            <button> @Html.ActionLink("Book", "BookingToggle", new { id = item.Id })</button>
-            <button>@Html.ActionLink("Cancel", "BookingToggle", new { id = item.Id })</button>
+        <div class="col-sm-12 col-lg-9">
+
+<br />
+            <p></p>
+            <table class="table">
+
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.StartTime)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Duration)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EndTime)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Duration)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EndTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+
+                            @if (User.IsInRole("Admin"))
+                            {  @Html.ActionLink("Edit", "Edit", new { id = item.Id }) <span>|</span>}
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }) @if (User.IsInRole("Admin"))
+                            {   <span>|</span>@Html.ActionLink("Delete", "Delete", new { id = item.Id }) <span>|</span>}
 
 
-</td>
-    </tr>
-}
+                            <button> @Html.ActionLink("Make reservation", "BookingToggle", new { id = item.Id })</button>
+                            <button>@Html.ActionLink("Cancel reservation", "BookingToggle", new { id = item.Id })</button>
 
-</table>
-}
-else
-{
-    <p>
-        <br /> 
-        Sign in to see member exclusive details
-    </p>
 
-}
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

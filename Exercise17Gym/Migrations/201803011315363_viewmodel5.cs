@@ -3,7 +3,7 @@ namespace Exercise17Gym.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class bugFixing12 : DbMigration
+    public partial class viewmodel5 : DbMigration
     {
         public override void Up()
         {
